@@ -1,20 +1,33 @@
-import {Home} from "./routes/Home/Home";
-import {Route, Routes} from "react-router-dom";
-import {MainLayout} from "./components/layouts/MainLayout";
+import { Route, Routes } from 'react-router-dom';
+import {MainLayout} from "./Layout/MainLayout";
+import {Home} from "./routes/Homes/Home"
 
+
+
+const routes = [
+    {
+        path: "/",
+        component: <Home/>
+    }
+]
 
 function App() {
-    const routes = [
-        {
-            path: "/",
-            component:<Home/>
-        }
-    ]
+
     return (
         <Routes>
-            {routes.map((routeers,index) =>
-                <Route key={index}  path={routeers.path} element={<MainLayout>{routeers.component}</MainLayout>} />
-            )}
+            {
+                routes.map((route, index) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        element={
+                            <MainLayout>
+                                {route.component}
+                            </MainLayout>
+                        }
+                    />
+                ))
+            }
         </Routes>
     );
 }

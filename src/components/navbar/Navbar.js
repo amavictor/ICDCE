@@ -1,16 +1,23 @@
-import {NavigationBar, NavLinks} from "./Navbar.styles";
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import "./navbar.scss"
+
 export const Navbar = () => {
     return (
-        <NavigationBar>
-            <h1>SCIMA</h1>
+        <nav>
+            <Link>
+                <img
+                    src='../../asset/logo.png'
+                    alt='logo'
+                />
+            </Link>
             <ul>
-                <NavLinks to={"/about-us"}>About us</NavLinks>
-                <NavLinks to={"/about-us"}>Join us</NavLinks>
-                <NavLinks to={"/about-us"}>Contact us</NavLinks>
-            </ul>
+                <li><Link>Home</Link></li>
+                <li><Link>About us</Link></li>
+                <li><Link>Projects</Link></li>
+                <li><Link>Get Involved</Link></li>
 
-        </NavigationBar>
+            </ul>
+        </nav>
     )
 }

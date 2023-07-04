@@ -33,7 +33,7 @@ code {
 }
 
 :root{
-  --green: #1A4D2E;
+  --primary:#34ba53;
   --black: #061106;
   --white: white;
   --brown: #665A48;
@@ -42,7 +42,7 @@ code {
 }
 h1,h2,h3,h4,h5,h6,ul,li,p,label,input,textarea,i{
   font-family: 'Be Vietnam Pro', sans-serif;
-  line-height: 1;
+  line-height: 1.3;
   color: var(--white);
 }
 i{
